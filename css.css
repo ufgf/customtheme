@@ -1,0 +1,745 @@
+/*Изменение шрифта на MADE Evolve Sans Regular (ориджинал Segoe UI)*/
+body, input, textarea, button {
+  font-family: "Segoe UI";
+}
+
+/*Альтернативный показ индикатора голоса (на серверах)*/
+.avatarSpeaking-1wJCNq, .avatarDefault-35WC3R, .avatarContainer-72bSfM {
+    border-color: transparent;
+    box-shadow: none;
+    z-index: 10;
+}
+.avatarSpeaking-1wJCNq::before {
+    content: ""; /*хули здесь пусто? похуй, главное работает*/
+    position: absolute;
+    left: -5px;
+    width: 4px;
+    height: 20px;
+    background: #43b581;
+}
+.avatarSpeaking-1wJCNq::after {
+    content: ""; /*хули здесь тоже пусто? похуй, главное работает*/
+    position: absolute;
+    height: 20px;
+    left: -5px;
+    width: 100%;
+    background: linear-gradient(to right, #43b581 0%, transparent 35%);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/*покрашенная игра
+Цвета (опционально, неа, анально) :
+Зелёный     (Стиль <В сети>)    {color: #43b581}
+ Жёлтый  (Стиль <Нет на месте>) {color: #faa61a}
+Красный (Стиль <Не беспокоить>) {color: #f04747}
+ Серый   (Стиль <Не в сети>)    {color: #636b75}*/
+.members-1998pB .memberInner-2CPc3V .activity-1IYsbk strong {color: #43b581}
+
+/*underline roles in memberlist & (not)DirectMessages*/
+.channel-members h2, .private-channels header {
+	text-align: center;
+}
+.channel-members h2::after, .private-channels header::after {
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+	border-bottom: 2px solid white;
+	padding-bottom: 10px;
+}
+
+/*.membersWrap-2h-GB4 { /*Это кусок темы, который скрывает мэмберов если не наведён курсор, полезная херня знаете ли
+  width: 90px;
+  min-width: unset; }
+  .membersWrap-2h-GB4 .scrollerWrap-2lJEkd {
+    transition: transform .2s ease;
+    box-shadow: 0 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: unset;
+    right: -150px; }
+  .membersWrap-2h-GB4:hover .scrollerWrap-2lJEkd {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(32, 34, 37, 0.6);
+    transform: translateX(-150px); }
+
+.members-1998pB {
+  height: 158%;
+  width: 240px;
+  padding-top: 15px; }
+  .membersWrap-2h-GB4:hover .members-1998pB {
+    height: 100%;
+    padding-top: 0; }
+
+.membersGroup-v9BXpm {
+  display: none; }
+  .membersWrap-2h-GB4:hover .membersGroup-v9BXpm {
+    display: block; }
+
+.memberInner-2CPc3V {
+  display: none; }
+  .membersWrap-2h-GB4:hover .memberInner-2CPc3V {
+    display: flex; }
+
+.theme-dark .message-group .comment .markup code.inline,
+.theme-dark .message-group .comment .markup pre code {
+  background-color: #2F2F2F; }*/
+div[class*="layer"], div[class*="layers-"] {
+    background: transparent !important;
+}
+div[class*="membersWrap-"] {
+    transform:translate(150px);
+    z-index:2;
+    transition:all 300ms ease;
+	background: transparent !important;
+}
+div[class*="members"], div[class*="typing"] {
+    background: transparent !important;
+}
+div[class*="membersWrap-"]:hover {
+    animation: member 300ms ease;
+    transform:translate(0px);
+	background-color: #2e3136 !important;
+	background-color: rgba(0, 0, 0, 0.2) !important;
+}
+div[class*="members"], div[class*="typing"] {
+    background: transparent !important;
+}
+div[class*="membersWrap-"] div[class*="members"]:hover {
+	background: linear-gradient(90deg,rgba(0,0,0,0) ,rgba(0,0,0,0)) !important;
+	background-color: rgba(0, 0, 0, 0.2) !important;
+}
+div[class*="membersWrap-"] .member.popout-open {
+    background: -webkit-linear-gradient(left,rgba(0, 0, 0, 0) 85%,rgba(0, 0, 0, 0)) !important;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 85%,rgba(0, 0, 0, 0)) !important;
+	background: rgba(0,0,0,0.2) !important;
+}
+/*
+.guild-header ul {
+	transform: translate3d(0,-150%,0) !important;
+}
+*/
+.chat>.title-wrap {
+	border-bottom: none !important;
+	box-shadow: none !important;
+}
+div[class*="membersWrap-"] div[class*="memberInner"] {
+    opacity:0;
+    transition:opacity 300ms ease, margin 100ms ease;
+}
+div[class*="membersWrap-"] div[class*="memberInner"] {
+    margin-bottom:10px;
+}
+div[class*="membersWrap-"]:hover div[class*="memberInner"] {
+    opacity:1;
+}
+div[class*="membersWrap-"] h2{
+    transform-origin:left;
+    transform:scale(0.8);
+    padding:0px 0px 0px 10px;
+    transition: all 300ms ease;
+
+}
+div[class*="membersWrap-"]:hover  .invite-btn , div[class*="membersWrap-"]:hover .invite-btn, {
+	width: initial !important;
+    height: initial !important;
+	padding: 5px 23px !important;
+	text-indent: initial !important;
+	white-space: initial !important;
+	overflow: initial !important;
+    background-size: 16px 16px;
+	background: url() 50% no-repeat;
+	background-color: #7289da;
+	transition: all 400ms ease;
+
+}
+div[class*="membersWrap-"]:hover h2{
+    transform:scale(1);
+    padding:0px 0px 0px 30px;
+}
+div[class*="membersWrap-"] .avatar-small{
+    transform:scale(1);
+}
+div[class*="membersWrap-"]:hover .avatar-small{
+    transform:scale(1);
+}
+.chat.flex-vertical.flex-spacer>.content.flex-spacer.flex-horizontal>.flex-spacer.flex-vertical{
+    margin-right:-145px;
+    z-index:1
+}
+.chat .flex-vertical .flex-spacer .private >.content.flex-spacer.flex-horizontal>.flex-spacer.flex-vertical{
+    margin-right:-145px;
+    z-index:1
+}
+.chat.flex-vertical.flex-spacer.private>.content.flex-spacer.flex-horizontal>.flex-spacer.flex-vertical {
+	margin-right:-145px;
+	z-index:1;
+}
+
+.userSettingsAccount-2eMFVR > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2):not(:hover) {
+  filter: blur(6px); /*Блюр электронной почты в настройках*/
+}
+
+.message-group .comment .markup pre code::before { /*определение кода, надпись над код-блоком какой юзается там код (например css, bash, ini и т.д.)*/
+  content: attr(class);
+  width: calc(100% + 270px);
+  display: block;
+  margin: -7px 0 .5em -270px;
+  padding: 2px 6px 2px 0;
+  background-color: #00000E;
+  color: #FFF;
+  font-family: "Segoe UI", Selawik, Arial, Helvetica, sans-serif; /*шрифт, лучше хуярить тот же что и на 3 строке*/
+  font-size: 10px;
+  line-height: 0.9625;
+  text-transform: uppercase;
+  word-spacing: 12px; 
+}
+
+[layer-id="user-settings"] .userSettingsAccount-2eMFVR ~ :last-child:after{ /*Зелёный текст в <Моя учётная запись>*/
+  margin-bottom: -3px;
+  padding-top: 10px;
+  padding-left: 10px;
+  display: block;
+  background: transparent;
+  border:1px solid var(--Main-Colour);
+  border-radius: 5px;
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" style="width:100%;height:100px;"><g style="fill: lime; font-size: .8em; font-family:verdana"><text y="20" style="font-size: 2em; fill: lime;">Ссылки</text><text y="45" style="font-size: 1.1em;" x="37">Гитхаб : нахрен гит хотя.. для авто-обновления может запилю</text><text y="65" style="font-size: 1.1em;" x="37">Сервер для саппорта : discord.gg/suJppwC</text><text y="85" style="font-size: 1.1em;" x="37">Пока пустое место.. но отвечаю, когда-нибудь я это место чем-то займу</text><text y="115" style="font-size: 2em; fill: lime;">Особенности</text><text y="140" style="font-size: 1.1em;" x="37">Блюр email (89 строка в коде)</text><text y="160" style="font-size: 1.1em;" x="37">Возможность увидеть какой язык кода используется в код-блоке (93 строка в коде)</text><text y="180" style="font-size: 1.1em;" x="37">Скрытие списка мемберов (52 строка в коде)</text><text y="200" style="font-size: 1.1em;" x="37">Некоторые детали прозрачны (136 строка в коде)</text><text y="220" style="font-size: 1.1em;" x="37">Использование своего шрифта (1 строка в коде)</text><text y="240" style="font-size: 1.1em;" x="37">Цветная игра (37 строка в коде)</text><text y="260" style="font-size: 1.1em;" x="37">Уменьшены некоторые элементы</text><text y="280" style="font-size: 1.1em;" x="37">Широкие настройки/сервера и текст по центру в кнопках (556 строка в коде)</text><text y="300" style="font-size: 1.1em;" x="37">И гипер куча мелких изменений</text></g></svg>');
+  animation: CLog 10s infinite linear;
+}
+@keyframes CLog { /*Раинбоу эффект к <зелёному> тексту выше*/
+  from {
+  -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+  -webkit-filter: hue-rotate(360deg);
+  }
+}
+
+.message-group .accessory{ /*Умный парсинг превью ссылок, оригинал и скрины: https://github.com/BeardDesign1/SmarterEmbeds */
+	display: flex;
+	flex-flow: row wrap;
+}
+.message-group .accessory>*:not(:last-of-type){
+	margin-right:10px;
+}
+.message-group .accessory>*{
+	margin-top:5px;
+}
+.reactions{
+	width:100%;
+	flex:100%;
+	order:9999999999;
+}
+
+#rtc-connection, #friends, #friends .btn, .friends-header, .friends-table, .search-bar, .guilds-wrapper, .channels-wrap, .guild-channels, .account, .links, .messages-wrapper, .title-wrap, .content, .chat-empty, .message-group-blocked, .private-channels, .guild-header header, .typing, .ider-red span {
+    background: transparent !important; /*Прозрачность в вещах описанных выше*/
+}
+
+/*#voice-connection, 
+#friends, 
+.friends-header, 
+.friends-table, 
+.guilds-wrapper, 
+.guild-header header, 
+.channels-wrap, 
+.private-channels .search-bar, 
+.private-channels, 
+.guild-channels, 
+.account, 
+.friend-table-add-header,
+.chat, 
+.content, 
+.title-wrap:not(.search-bar), 
+.messages-wrapper, 
+.messages .divider span, 
+.messages .divider:before, 
+.content, .message-group-blocked, 
+.is-local-bot-message,
+.channel-members-loading, 
+.channel-members-loading .heading, 
+.channel-members-loading .member, 
+.typing, 
+.container-RYiLUQ, 
+.theme-dark .ui-standard-sidebar-view, 
+.theme-dark .ui-standard-sidebar-view .sidebar-region,
+.theme-dark .ui-standard-sidebar-view .content-region,
+.theme-dark .channel-members,
+.container-2OU7Cz,
+.theme-dark .chat form, 
+.channels-3g2vYe, 
+.theme-dark .friends-table, 
+.theme-dark .messages-wrapper, 
+.content .flex-spacer, 
+.theme-dark .chat>.content, 
+.theme-dark .chat, 
+.channel-members, 
+.search .search-bar, 
+.container-iksrDt, 
+.container-3lnMWU, 
+.theme-dark .title-qAcLxz, 
+.theme-dark .typing-3eiiL_,
+.theme-dark .activityFeed-HeiGwL,
+.theme-dark .headerBar-cxbhPD,
+.theme-dark .lfg-3xoFkI,
+.video-3lOWa6,
+.theme-dark .private-channel-call,
+.appMount-3VJmYg,
+.container-2lgZY8,
+.channels-Ie2l6A,
+.container-PNkimc,
+.container-2Thooq,
+.theme-dark .title-3qD0b-,
+.theme-dark .typing-2GQL18,
+.search-bar.search-bar-light,
+.emojiPicker-3m1S-j .scroller-3vODG7 .emojiItem-109bjA.selected-39BZ4S,
+.theme-dark .members-1998pB{
+  background: transparent !important;
+}
+.theme-dark .card-2WxYqG {
+    background-color: rgba(54, 57, 63, 0.3)!important;
+}
+.theme-dark .layer-3QrUeG, .theme-dark .layers-3iHuyZ, .typeWindows-15E0Ys {
+    background: rgba(0, 0, 0, 0.18) !important;
+}
+Тёмные цвета везде где тожно, или Fully Darkness*/
+
+
+
+/*:not(.guilds-wrapper.DSAC-styled) .guilds-add > .guilds-add-inner { Сервера, которые скрываются/раскрываются в стопке
+ 	font-size: 0 !important;
+ }
+
+:not(.guilds-wrapper.DSAC-styled) .guilds-add:before {
+	content: 'add';
+	position: relative;
+	width: 100%;
+	height: 100%;
+	bottom: 6px;
+	text-align: center;
+	font-size: 15px;
+	color: white;
+	text-transform: uppercase;
+}
+
+:not(.guilds-wrapper.DSAC-styled) .guilds-add:hover:before {
+	content: 'click';
+	font-size: 15px;
+	bottom: 6px;
+}
+
+.guilds-wrapper:not(.DSAC-styled) > div > div > .dms {
+   transition: 0.4s ;
+ }
+
+.guilds-wrapper:not(.DSAC-styled):not(:hover) > div > div > .guild:not(.unread):not(:first-child):not([id="bd-pub-li"]){
+     opacity: 0 ;
+     height: 0 ;
+	 margin-top: 0;
+ 	 transition: height 0.4s, opacity 0.4s, margin 0.4s;
+     transition-delay: 0.3s ;
+ }
+
+ .guilds-wrapper:not(.DSAC-styled) > div > div > .guild{
+     opacity: 0.8 ;
+	 margin-top: 0;
+	 transition: height 0.4s, opacity 0.4s, margin 0.4s;
+ }
+
+ .guilds-wrapper:not(.DSAC-styled) .guilds .guild:not(:first-child) .guild-inner:hover .avatar-small{
+   color: black;
+   font-weight: 500;
+   transition: 0.4s;
+ }
+
+ .guilds-wrapper:not(.DSAC-styled) .guilds .guild:not(:first-child) .guild-inner .avatar-small{
+   color: black;
+   font-weight: bold;
+   transition: 0.4s;
+   transition-delay: 0.2s;
+ }
+
+
+ :not(.guilds-wrapper.DSAC-styled) .guild.unread::before{
+ 	background: transparent ;
+ }
+*/
+
+:not([class*="Voice"]).icon-sxakjD .background-cBzfUc, /*???*/
+:not([class*="Voice"]).icon-sxakjD ~ .foreground-2W-aJk {
+	stroke-width: 1;
+}
+
+.icon-sxakjD, /*???*/
+.foreground-2W-aJk,
+.background-cBzfUc {
+	opacity: 1;
+}
+
+.container-hidden .colorDefaultText-oas-QM, /*Новые цвета иконок каналов на серверах*/
+.container-hidden .colorDefaultVoice-3wYlhb {
+	color: rgb(98,98,255);
+	stroke: rgb(98,98,255);
+}
+.colorHoveredText-OZnAgu,
+.colorHoveredVoice-1kucsK {
+	color: white;
+	stroke: white;
+	stroke-width: 2 !important;
+}
+.colorDefaultText-oas-QM,
+.colorDefaultVoice-3wYlhb {
+	color: white;
+	stroke: white;
+}
+.colorUnreadText-2t7XRb,
+.colorUnreadVoice-137o4S {
+	color: rgb(255,98,98);
+	stroke: rgb(255,98,98);
+}
+.colorLockedText-1VRkPt,
+.colorLockedVoice-2UlBjl{
+	color: rgb(98,98,255);
+	stroke: rgb(98,98,255);
+}
+.colorSelectedVoice-Xcb_9R,
+.colorSelectedText-1y4Wvs {
+	color: rgb(51,204,51);
+	stroke: rgb(51,204,51);
+}
+.colorMutedText-36M8WR {
+	color: rgb(20,20,20);
+	stroke: rgb(20,20,20);;
+}
+
+.channels-Ie2l6A { /*ширина каналов 222 пикселя (меньше чем стандарт)*/
+  width: 222px;
+}
+
+.guilds-wrapper .guilds .guild.unread:before { /*Новый индикатор непрочитанных сообщений на серверах*/
+    background: #3191D9;
+    border-radius: 0;
+    height: 15px;
+    margin-top: -6px;
+    box-shadow: 0 0 12px #5873DC;
+}
+.theme-dark .chat form {
+    -webkit-box-shadow: none;
+    border: 0;
+    box-shadow: none;
+} 
+
+.mention { /*новый стиль упоминания*/
+  border-radius: 5%;
+}
+.mention:hover {
+  color: #DDD;
+}
+
+.ui-standard-sidebar-view .sidebar-region { /*широкие настройки*/
+    -ms-flex: 0;
+    -ms-flex-pack: end;
+    flex: 0;
+    z-index: 1;
+}
+.ui-standard-sidebar-view .sidebar-region, .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller {
+    justify-content: flex-start;
+}
+
+#bd-settings-sidebar .ui-tab-bar-item { /*покрашенные кнопки в категории BD*/
+    color: #b9bbbe;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 2px;
+    padding: 6px 10px;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex-shrink: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+#bd-settings-sidebar .ui-tab-bar-item:hover {
+    color: #FFF;
+    background-color: #5873DC;
+}
+.side-2nYO0F .item-3879bf {
+    border-radius: 0;
+    margin-bottom: 2px;
+    padding-bottom: 6px;
+    color: #FFF !important;
+    padding-top: 6px;
+    transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.theme-dark .side-2nYO0F .itemDefault-3NDwnY:hover, .theme-dark .side-2nYO0F .itemHover-3rojsB:hover {
+    background-color: #5873DC !important;
+    color: #FFF !important;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+}
+.bda-slist li {
+    background: #29292A;
+    border: 0;
+    border-radius: 0;
+    padding: 5px 7px;
+    max-height: 175px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+.a { /*Новые кнопки вкл/выкл*/
+    background-color: #7289da !important;
+}
+.a {
+    border-radius: 100%;
+    height: 24px;
+    z-index: 100000;
+}
+.sizeDefault-rZbSBU:after {
+    margin: 5px;
+    margin: -3px 0 0 0;
+    width: 24px;
+    z-index: 10000;
+}
+.a {
+    background-color: #7289DA !important;
+    content: "";
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+#bd-settingspane-container .ui-switch-item .ui-switch-wrapper {
+    border-radius: 14px;
+    height: 18px;
+    width: 42px;
+}
+.switchEnabled-3CPlLV {
+    opacity: 1;
+    overflow: unset;
+}
+#bd-settingspane-container .ui-switch-item .ui-switch-wrapper .ui-switch:before {
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    opacity: 0;
+    position: unset;
+    z-index: -1000000;
+}
+
+.small-popout-box { /*удаление линий между сообщениями*/
+    background: #29292A;
+    border: transparent;
+    border-radius: 0;
+    position: relative;
+}
+.theme-dark .channel-members .member.popout-open, .theme-dark .channel-members .member:hover {
+    background: -webkit-gradient(linear,left top,right top,color-stop(85%,#282b30),to(#2f3136));
+    background: #333333;
+}
+.contextMenu-uoJTbz {
+    background-color: #29292A;
+    border-radius: 0;
+    border: none !important;
+    border-color: transparent !important;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+}
+.Select-menu-outer {
+    background-color: #29292A;
+    border-radius: 0;
+    border: none !important;
+    border-color: transparent !important;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+}
+.theme-dark .typing-3eiiL_ {
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    float: right;
+    text-align: center
+}
+.theme-dark .typing-3eiiL_ span {
+    display: none
+}
+.theme-dark .message-group:not(.has-divider) {
+    border-bottom-color: transparent;
+}
+
+.theme-dark .message-group a { /*удаление закруглённостей на превью картинок*/
+    color: #0096cf;
+    border-radius: 0;
+}
+
+svg[class^="attachButton"]{ /*новая иконка приклепления файлов в чатбоксе*/
+    background-image: url('https://image.flaticon.com/icons/png/128/321/321834.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+svg[class^="attachButton"] > *{display: none;}
+
+.guilds-wrapper .guilds .guild.selected:before { /*новая иконка ЛС + тень от иконок серверов*/
+    -webkit-transition: height .25s ease-in-out,margin-top .25s ease-in-out;
+    background: #3191D9;
+    border-radius: 0!important;
+    height: 55px;
+    margin-top: -27px;
+    transition: height .25s ease-in-out,margin-top .25s ease-in-out;
+}
+.guilds-wrapper .guilds .guild .guild-inner {
+    background: transparent !important;
+    border-radius: 100% !important;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 50px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+.guilds-wrapper .guilds .guild .guild-inner:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+}
+.guilds-wrapper .guilds .friends-icon {
+    background-image: url(https://lh5.ggpht.com/SH0GFeQzs7w6RZoQ5PIxndvUPvoB1PB8eW_p28oeiRzw8P0MOThX_n_6H0iuJ1LKD9FT=w300);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 32px 28px;
+    height: 50px;
+    width: 50px;
+}
+
+.sidebar .side-8zPYf6 { /*Текст по центру в настройках*/
+  text-align: center;
+}
+
+.user-settings-games .game-name { /*уменьшения название игры в разделе игры в настройках*/
+    height: 20px;
+}
+.user-settings-keybinds .keybind-group { /*тоже самое что и выше но для сочетаний клавиш*/
+    padding: 0 15px;
+    padding-bottom: 19px;
+    padding-top: 20px;
+}
+
+.theme-dark #friends .tab-bar .tab-bar-separator { /*удаляет сепараторы (разделители)?*/
+    background-color: hsla(0,0%,100%,.1);
+    display: none;
+}
+
+.theme-dark #friends .tab-bar .tab-bar-item { /*квадратные кнопки в ЛС*/
+    color: hsla(0,0%,100%,.6);
+    border-radius: 0;
+}
+.theme-dark #friends .tab-bar .tab-bar-item:hover:not(.selected) {
+    background-color: #29292A;
+    color: #FFF;
+}
+
+.theme-dark .ui-standard-sidebar-view .btn-close { /*Квадратная кнопка <Закрыть> в настройках*/
+    border-color: rgb(76, 123, 225);
+    border-radius: 0;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ui-standard-sidebar-view .content-column.default { /*Убираем лишние проблы в настройках*/
+    padding: 20px 40px 80px;
+}
+.ui-standard-sidebar-view .content-column, .ui-standard-sidebar-view .custom-column { /* Использование места, по назначению! Или лишнее пустое место в настройках будет заменено интерфейсом. Выглядит нереально ахуенно.*/
+    -ms-flex: 1 1 auto;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    max-width: 100%;
+    min-height: 100%;
+    min-width: 460px;
+}
+theme-dark .ui-standard-sidebar-view .content-region { /*Изменения и регионом*/
+    background: #29292A;
+}
+
+.avatar-profile::before, /*без комментариев в профиле*/
+.avatar-profile::after,
+.avatar-large+.comment .timestamp::before,
+.avatar-large+.comment .timestamp::after{
+    display:none!important;
+}
+
+.popoutList-T9CKZQ .scroller-2CvAgC::-webkit-scrollbar,
+.ui-standard-sidebar-view .content-region-scroller::-webkit-scrollbar,
+.user-popout .section.roles::-webkit-scrollbar,
+.ui-standard-sidebar-view .scroller::-webkit-scrollbar,
+.scroller-wrap .scroller::-webkit-scrollbar {
+    width: 13px /*ширина объектов выше 13пк*/
+}
+
+.popoutList-T9CKZQ .scroller-2CvAgC::-webkit-scrollbar-track-piece,
+.ui-standard-sidebar-view .content-region-scroller::-webkit-scrollbar-track-piece,
+.user-popout .section.roles::-webkit-scrollbar-track-piece,
+.ui-standard-sidebar-view .scroller::-webkit-scrollbar-track-piece,
+.scroller-wrap .scroller::-webkit-scrollbar-track-piece {
+    border: 4px solid var(--white0) !important;
+    background-color: rgba(0, 0, 0, 0) !important; /*Обводка + невидимые объекты выше*/
+}
+
+.container-1UB9sr,
+#rtc-connection,
+#voice-connection {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0.1));
+    background-color: var(--lvl3);
+    transition: all 500ms ease;
+    border:none;
+}
+
+.flex-spacer {
+    background: transparent;
+}
+
+.buttonInfo-3nkbOt { /*новая иконка : информация о подключении*/
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMSAxNWgtMnYtNmgydjZ6bTAtOGgtMlY3aDJ2MnoiLz48L3N2Zz4=) !important;
+}
+.buttonDisconnect-3W_SJc { /*новая иконка : отключение*/
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTIgOWMtMS42IDAtMy4xNS4yNS00LjYuNzJ2My4xYzAgLjM5LS4yMy43NC0uNTYuOS0uOTguNDktMS44NyAxLjEyLTIuNjYgMS44NS0uMTguMTgtLjQzLjI4LS43LjI4LS4yOCAwLS41My0uMTEtLjcxLS4yOUwuMjkgMTMuMDhjLS4xOC0uMTctLjI5LS40Mi0uMjktLjcgMC0uMjguMTEtLjUzLjI5LS43MUMzLjM0IDguNzggNy40NiA3IDEyIDdzOC42NiAxLjc4IDExLjcxIDQuNjdjLjE4LjE4LjI5LjQzLjI5LjcxIDAgLjI4LS4xMS41My0uMjkuNzFsLTIuNDggMi40OGMtLjE4LjE4LS40My4yOS0uNzEuMjktLjI3IDAtLjUyLS4xMS0uNy0uMjgtLjc5LS43NC0xLjY5LTEuMzYtMi42Ny0xLjg1LS4zMy0uMTYtLjU2LS41LS41Ni0uOXYtMy4xQzE1LjE1IDkuMjUgMTMuNiA5IDEyIDl6Ii8+PC9zdmc+);
+}
+
+.timestamp {
+  color: var(--M-Colour) !important;
+  font-size: 13px;
+}
+
+.guild.guilds-add {
+  border-color: var(--Main-Colour) !important;
+  border-style: groove !important;
+  background: var(--Background-Colour);
+}
+.guild.guilds-add:hover {
+  border-color: var(--Main-Colour) !important;
+  background: var(--Background-Colour);
+}
+.guilds-wrapper .guilds-add-inner {
+  position: absolute;
+  top: calc(50% - 22px);
+  left:22.4%;
+  text-align:center;
+}
+
+.form-inner header {
+  color: var(--Main-Colour) !important;
+}
+
+.action-header {
+  color: var(--Main-Colour) !important;
+}
+
+.action-icon {
+  background-color: #ffffff !important;
+}
+
+.btn.btn-primary {
+  background-color: var(--Main-Colour) !important;
+}
