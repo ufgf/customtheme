@@ -72,7 +72,7 @@ body, input, textarea, button, .message-group .comment .markup pre code, .messag
     z-index: -1;
 }
 
-/*покрашенная игра
+/*покрашенное действие <играет в..>
 Цвета (опционально) :
 Зелёный     (Стиль <В сети>)    {color: #43b581}
  Жёлтый  (Стиль <Нет на месте>) {color: #faa61a}
