@@ -1,86 +1,79 @@
-@import url('https://spthiel.github.io/css/CodeBlocks.raw.css');
-@import url('https://github.com/spthiel/BetterDiscord/blob/master/Themes/CodeBlocks/CodeBlocks.theme.css');
+@import url('https://raw.githubusercontent.com/spthiel/BetterDiscord/master/Themes/CodeBlocks/CodeBlocks.theme.css');
 @import url('https://rawgit.com/rauenzi/BetterDiscordAddons/master/Themes/RadialStatus/import/RadialStatus.css');
-/*Суда пишем импорты URL, не ниже даже этого комментария*/
-@-webkit-keyframes pulse {
-  0% {box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);}
-  70% {box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);}
-  100% {box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);}
-}
+@import url('https://raw.githubusercontent.com/BeardDesign1/SmarterEmbeds/master/SmarterEmbeds.theme.css'); /* Умный парсинг превью ссылок, оригинал и скриншоты: https://github.com/BeardDesign1/SmarterEmbeds */
+/* Важные Импорты */
+
 @keyframes pulse {
-  0% {-moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);}
-  70% {-moz-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-       box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);}
-  100% {-moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);}
+	0% {box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);}
+	70% {box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);}
+	100% {box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);}
 }
+
 @keyframes pulsebadge {
-  0% {-moz-box-shadow: 0 0 0 0 rgba(240, 71, 71, 0.4);
-      box-shadow: 0 0 0 0 rgba(240, 71, 71, 0.4);}
-  70% {-moz-box-shadow: 0 0 0 10px rgba(240, 71, 71, 0);
-       box-shadow: 0 0 0 10px rgba(240, 71, 71, 0);}
-  100% {-moz-box-shadow: 0 0 0 0 rgba(240, 71, 71, 0);
-        box-shadow: 0 0 0 0 rgba(240, 71, 71, 0);}
+	0% {box-shadow: 0 0 0 0 rgba(240, 71, 71, 0.4);}
+	70% {box-shadow: 0 0 0 10px rgba(240, 71, 71, 0);}
+	100% {box-shadow: 0 0 0 0 rgba(240, 71, 71, 0);}
 }
+
 @keyframes CLog {
-  from {-webkit-filter: hue-rotate(0deg);}
-  to {-webkit-filter: hue-rotate(360deg);}
+	from {-webkit-filter: hue-rotate(0deg);}
+	to {-webkit-filter: hue-rotate(360deg);}
 }
-@keyframes mention-flash{
-  0% {box-shadow:0 0 10px rgba(240,71,71,0),0 0 0 0 rgba(240,71,71,.4)}
-  50% {box-shadow:0 0 20px 15px rgba(240,71,71,.3),0 0 0 4px rgba(240,71,71,.7)}
-  100% {box-shadow:0 0 25px 16px rgba(240,71,71,0),0 0 3px 8px rgba(240,71,71,0)}
+
+@keyframes mention-flash {
+	0% {box-shadow:0 0 10px rgba(240,71,71,0),0 0 0 0 rgba(240,71,71,.4);}
+	50% {box-shadow:0 0 20px 15px rgba(240,71,71,.3),0 0 0 4px rgba(240,71,71,.7);}
+	100% {box-shadow:0 0 25px 16px rgba(240,71,71,0),0 0 3px 8px rgba(240,71,71,0);}
 }
+
 @keyframes pulsetwo {
-  0% {opacity: 0.2;}
-  25% {opacity: 1;}
-  50% {opacity: 0.2;}
-  75% {opacity: 1;}
-  100% {opacity: 0.2;}
+	0% {opacity: 0.2;}
+	25% {opacity: 1;}
+	50% {opacity: 0.2;}
+	75% {opacity: 1;}
+	100% {opacity: 0.2;}
 }
+/* Важные Кейфремы */
 
-/*Здесь кейфремы которые отвечают за анимации, не думайте их трогать (если вы не опытный пользователь(!)) иначе получите.. что-то плохое с анимациями.*/
-
-/*Изменение шрифта на MADE Evolve Sans Regular (оригинал Segoe UI)*/
+/* Изменение шрифта на Segoe UI (оригинал: MADE Evolve Sans Regular) */
 body, input, textarea, button, .message-group .comment .markup pre code, .message-group .comment .markup code.inline, .markdown-modal pre, .markdown-modal code.inline, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  font-family: "Segoe UI" !important;
+	font-family: "Segoe UI"!important;
 }
 
-/*Альтернативный показ индикатора голоса (на серверах)*/
+/* Альтернативный показ индикатора голоса (на серверах) */
 .avatarSpeaking-1wJCNq, .avatarDefault-35WC3R, .avatarContainer-72bSfM {
-    border-color: transparent;
-    box-shadow: none;
-    z-index: 10;
+	border-color: transparent;
+	box-shadow: none;
+	z-index: 10;
 }
 .avatarSpeaking-1wJCNq::before {
-    content: ""; 
-    position: absolute;
-    left: -5px;
-    width: 4px;
-    height: 20px;
-    background: #43b581;
+	content: ""; 
+	position: absolute;
+	left: -5px;
+	width: 4px;
+	height: 20px;
+	background: #43b581;
 }
 .avatarSpeaking-1wJCNq::after {
-    content: ""; 
-    position: absolute;
-    height: 20px;
-    left: -5px;
-    width: 100%;
-    background: linear-gradient(to right, #43b581 0%, transparent 35%);
-    opacity: 0.5;
-    z-index: -1;
+	content: ""; 
+	position: absolute;
+	height: 20px;
+	left: -5px;
+	width: 100%;
+	background: linear-gradient (to right, #43b581 0%, transparent 35%);
+	opacity: 0.5;
+	z-index: -1;
 }
 
-/*покрашенное действие <играет в..>
+/* Покрашенное действие <играет в..>
 Цвета (опционально) :
-Зелёный     (Стиль <В сети>)    {color: #43b581}
- Жёлтый  (Стиль <Нет на месте>) {color: #faa61a}
-Красный (Стиль <Не беспокоить>) {color: #f04747}
- Серый   (Стиль <Не в сети>)    {color: #636b75}*/
+ Зелёный	 (Стиль <В сети>)	 {color: #43b581}
+ Жёлтый  (Стиль <Нет на месте>)	 {color: #faa61a}
+ Красный (Стиль <Не беспокоить>) {color: #f04747}
+ Серый   (Стиль <Не в сети>)	 {color: #636b75} */
 .members-1998pB .memberInner-2CPc3V .activity-1IYsbk strong {color: #43b581}
 
-/*underline roles in memberlist & (not)DirectMessages*/
+/* underline roles in memberlist & (not)DirectMessages */
 .channel-members h2, .private-channels header {
 	text-align: center;
 }
@@ -93,70 +86,85 @@ body, input, textarea, button, .message-group .comment .markup pre code, .messag
 	padding-bottom: 10px;
 }
 
-/*.membersWrap-2h-GB4 { /Это кусок темы, который скрывает участников если не наведён курсор, полезно, знаете ли/
-  width: 90px;
-  min-width: unset; }
-  .membersWrap-2h-GB4 .scrollerWrap-2lJEkd {
-    transition: transform .2s ease;
-    box-shadow: 0 0;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: unset;
-    right: -150px; }
-  .membersWrap-2h-GB4:hover .scrollerWrap-2lJEkd {
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(32, 34, 37, 0.6);
-    transform: translateX(-150px); }
+/* Это кусок темы, который скрывает участников если не наведён курсор */
+/*
+.membersWrap-2h-GB4 { 
+	width: 90px;
+	min-width: unset;
+}
+.membersWrap-2h-GB4 .scrollerWrap-2lJEkd {
+	transition: transform .2s ease;
+	box-shadow: 0 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: unset;
+	right: -150px;
+}
+.membersWrap-2h-GB4:hover .scrollerWrap-2lJEkd {
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(32, 34, 37, 0.6);
+	transform: translateX(-150px);
+}
 
 .members-1998pB {
-  height: 158%;
-  width: 240px;
-  padding-top: 15px; }
-  .membersWrap-2h-GB4:hover .members-1998pB {
-    height: 100%;
-    padding-top: 0; }
+	height: 158%;
+	width: 240px;
+	padding-top: 15px;
+}
+.membersWrap-2h-GB4:hover .members-1998pB {
+	height: 100%;
+	padding-top: 0;
+}
 
 .membersGroup-v9BXpm {
-  display: none; }
+	display: none;
+}
   .membersWrap-2h-GB4:hover .membersGroup-v9BXpm {
-    display: block; }
+	display: block;
+}
 
 .memberInner-2CPc3V {
-  display: none; }
+	display: none;
+}
   .membersWrap-2h-GB4:hover .memberInner-2CPc3V {
-    display: flex; }
+	display: flex;
+}
 
 .theme-dark .message-group .comment .markup code.inline,
 .theme-dark .message-group .comment .markup pre code {
-  background-color: #2F2F2F; }*/
+	background-color: #2F2F2F;
+}
+*/
+
+/* Больше хардкода и стабильности: */
 div[class*="layer"], div[class*="layers-"] {
-    background: transparent !important;
+	background: transparent !important;
 }
 div[class*="membersWrap-"] {
-    transform:translate(150px);
-    z-index:2;
-    transition:all 300ms ease;
+	transform:translate(150px);
+	z-index:2;
+	transition:all 300ms ease;
 	background: transparent !important;
 }
 div[class*="members"], div[class*="typing"] {
-    background: transparent !important;
+	background: transparent !important;
 }
 div[class*="membersWrap-"]:hover {
-    animation: member 300ms ease;
-    transform:translate(0px);
+	animation: member 300ms ease;
+	transform:translate(0px);
 	background-color: #2e3136 !important;
 	background-color: rgba(0, 0, 0, 0.2) !important;
 }
 div[class*="members"], div[class*="typing"] {
-    background: transparent !important;
+	background: transparent !important;
 }
 div[class*="membersWrap-"] div[class*="members"]:hover {
 	background: linear-gradient(90deg,rgba(0,0,0,0) ,rgba(0,0,0,0)) !important;
 	background-color: rgba(0, 0, 0, 0.2) !important;
 }
 div[class*="membersWrap-"] .member.popout-open {
-    background: -webkit-linear-gradient(left,rgba(0, 0, 0, 0) 85%,rgba(0, 0, 0, 0)) !important;
-    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 85%,rgba(0, 0, 0, 0)) !important;
+	background: -webkit-linear-gradient(left,rgba(0, 0, 0, 0) 85%,rgba(0, 0, 0, 0)) !important;
+	background: linear-gradient(90deg,rgba(0, 0, 0, 0) 85%,rgba(0, 0, 0, 0)) !important;
 	background: rgba(0,0,0,0.2) !important;
 }
 /*
@@ -169,25 +177,25 @@ div[class*="membersWrap-"] .member.popout-open {
 	box-shadow: none !important;
 }
 div[class*="membersWrap-"] div[class*="memberInner"] {
-    opacity:0;
-    transition:opacity 300ms ease, margin 100ms ease;
+	opacity:0;
+	transition:opacity 300ms ease, margin 100ms ease;
 }
 div[class*="membersWrap-"] div[class*="memberInner"] {
-    margin-bottom:10px;
+	margin-bottom:10px;
 }
 div[class*="membersWrap-"]:hover div[class*="memberInner"] {
-    opacity:1;
+	opacity:1;
 }
 div[class*="membersWrap-"] h2{
-    transform-origin:left;
-    transform:scale(0.8);
-    padding:0px 0px 0px 10px;
-    transition: all 300ms ease;
+	transform-origin:left;
+	transform:scale(0.8);
+	padding:0px 0px 0px 10px;
+	transition: all 300ms ease;
 
 }
 div[class*="membersWrap-"]:hover  .invite-btn , div[class*="membersWrap-"]:hover .invite-btn {
 	width: initial !important;
-    height: initial !important;
+	height: initial !important;
 	padding: 5px 23px !important;
 	text-indent: initial !important;
 	white-space: initial !important;
@@ -199,311 +207,70 @@ div[class*="membersWrap-"]:hover  .invite-btn , div[class*="membersWrap-"]:hover
 
 }
 div[class*="membersWrap-"]:hover h2{
-    transform:scale(1);
-    padding:0px 0px 0px 30px;
+	transform:scale(1);
+	padding:0px 0px 0px 30px;
 }
 div[class*="membersWrap-"] .avatar-small{
-    transform:scale(1);
+	transform:scale(1);
 }
 div[class*="membersWrap-"]:hover .avatar-small{
-    transform:scale(1);
+	transform:scale(1);
 }
 .chat.flex-vertical.flex-spacer>.content.flex-spacer.flex-horizontal>.flex-spacer.flex-vertical{
-    margin-right:-145px;
-    z-index:1;
+	margin-right:-145px;
+	z-index:1;
 }
 .chat .flex-vertical .flex-spacer .private >.content.flex-spacer.flex-horizontal>.flex-spacer.flex-vertical{
-    margin-right:-145px;
-    z-index:1;
+	margin-right:-145px;
+	z-index:1;
 }
 .chat.flex-vertical.flex-spacer.private>.content.flex-spacer.flex-horizontal>.flex-spacer.flex-vertical {
 	margin-right:0px;
 	z-index:1;
 }
-
+/* Блюр электронной почты в настройках */
 .userSettingsAccount-2eMFVR > div > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2):not(:hover) {
-    filter: blur(6px); /*Замытие электронной почты в настройках*/
+	filter: blur(6px); 
 }
 
-/*.message-group .comment .markup pre code::before { /*определение кода, надпись над код-блоком какой юзается там код (например css, bash, ini и т.д.)
-  content: attr(class);
-  width: calc(100% + 270px);
-  display: block;
-  margin: -7px 0 .5em -270px;
-  padding: 2px 6px 2px 0;
-  background-color: #00000E;
-  color: #FFF;
-  font-family: "Segoe UI", Selawik, Arial, Helvetica, sans-serif; /шрифт, лучше хуярить тот же что и на 3 строке/
-  font-size: 10px;
-  line-height: 0.9625;
-  text-transform: uppercase;
-  word-spacing: 12px; 
-}*/
-:root {
-		--des-1c:              "1c";
-
-		--des-abnf:            "ABNF";
-		--des-accesslog:       "Access Log";
-		--des-actionscript:    "ActionScript";
-		--des-ada:             "Ada";
-		--des-apache:          "Apache";
-		--des-applescript:     "Applescript";
-		--des-arduino:         "Arduino";
-		--des-armasm:          "ARM Assembly";
-		--des-asciidoc:        "AsciiDoc";
-		--des-aspectj:         "AspectJ";
-		--des-atom:            "Atom Feed (XML)";
-		--des-autohotkey:      "AutoHotkey";
-		--des-autoit:          "AutoIt";
-		--des-avrasm:          "AVR Assembler";
-		--des-awk:             "Awk";
-		--des-axapta:          "Axapta";
-
-		--des-bash:            "Bash";
-		--des-basic:           "Basic";
-		--des-dos:             "Batch";
-		--des-bnf:             "BNF";
-		--des-brainfuck:       "Brainfuck";
-
-		--des-c:               "C/C++";
-		--des-cs:              "C# (cs)";
-		--des-cal:             "CAL";
-		--des-capnproto:       "Cap'n Proto";
-		--des-ceylon:          "Ceylon";
-		--des-clean:           "Clean";
-		--des-clojure:         "Clojure";
-		--des-clojure-repl:    "Clojure REPL";
-		--des-cmake:           "CMake";
-		--des-coffeescript:    "CoffeeScript";
-		--des-coq:             "Coq";
-		--des-cos:             "CachÃ© Object Script";
-		--des-podspec:         "CocoaPod";
-		--des-crmsh:           "crmsh";
-		--des-crystal:         "Crystal";
-		--des-csp:             "CSP";
-		--des-css:             "CSS";
-
-		--des-d:               "D";
-		--des-dart:            "Dart";
-		--des-delphi:          "Delphi (Object Pascal)";
-		--des-diff:            "Diff";
-		--des-django:          "Django";
-		--des-dns:             "DNS Zone File";
-		--des-dockerfile:      "Dockerfile";
-		--des-dsconfig:        "dsconfig";
-		--des-dts:             "Device Tree";
-		--des-dust:            "Dust";
-
-		--des-ebnf:            "EBNF";
-		--des-elixir:          "Elixir";
-		--des-elm:             "Elm";
-		--des-erb:             "ERB";
-		--des-erlang:          "Erlang";
-		--des-erlang-repl:     "Erlang REPL";
-		--des-excel:           "Excel";
-
-		--des-fs:              "F#";
-		--des-fix:             "Fix";
-		--des-flix:            "Flix";
-		--des-fortran:         "Fortran";
-
-		--des-gams:            "GAMS";
-		--des-gauss:           "Gauss";
-		--des-gcode:           "G-code";
-		--des-gherkin:         "Gherkin";
-		--des-glsl:            "GLSL";
-		--des-go:              "Go";
-		--des-golo:            "Golo";
-		--des-gradle:          "Gradle";
-		--des-groovy:          "Groovy";
-
-		--des-haml:            "Haml";
-		--des-handlebars:      "Handlebars";
-		--des-haskell:         "Haskell";
-		--des-haxe:            "Haxe";
-		--des-hsp:             "HSP";
-		--des-html:            "HTML";
-		--des-htmlbars:        "HTMLBars";
-		--des-http:            "HTTP";
-		--des-https:           "HTTPS";
-		--des-hy:              "Hy";
-
-		--des-inform7:         "Inform7";
-		--des-ini:             "Ini";
-		--des-irpf90:          "IRPF90";
-		--des-irb:             "IRB";
-
-		--des-java:            "Java";
-		--des-javascript:      "JavaScript (Babel)";
-		--des-xjb:             "JAXB (XML)";
-		--des-jboss-cli:       "JBoss CLI";
-		--des-json:            "JSON";
-		--des-julia:           "Julia";
-		--des-julia-repl:      "Julia REPL";
-
-		--des-kotlin:          "Kotlin";
-
-		--des-lasso:           "Lasso";
-		--des-ldif:            "LDIF";
-		--des-leaf:            "Leaf";
-		--des-less:            "Less";
-		--des-lisp:            "Lisp";
-		--des-livecodeserver:  "LiveCode Server";
-		--des-livescript:      "LiveScript";
-		--des-llvm:            "LLVM IR";
-		--des-lsl:             "LSL";
-		--des-lua:             "Lua";
-
-		--des-makefile:        "Makefile";
-		--des-markdown:        "Markdown (md)";
-		--des-mathematica:     "Mathematica";
-		--des-matlab:          "MatLab";
-		--des-maxima:          "Maxima";
-		--des-mel:             "MEL";
-		--des-mercury:         "Mercury";
-		--des-mipsasm:         "MISP Assembly";
-		--des-routeros:        "Mikrotik RouterOS";
-		--des-mizar:           "Mizar";
-		--des-mojolicious:     "Mojolicious";
-		--des-monkey:          "Monkey";
-		--des-moonscript:      "MoonScript";
-
-		--des-n1ql:            "N1QL";
-		--des-nginx:           "Nginx";
-		--des-nimrod:          "Nimrod";
-		--des-nix:             "Nix";
-		--des-nsis:            "NSIS";
-
-		--des-objectivec:      "Objective-C";
-		--des-ocaml:           "OCaml";
-		--des-openscad:        "OpenSCAD";
-		--des-ruleslanguage:   "Oracle Rules Language";
-		--des-oxygene:         "Oxygene";
-
-		--des-parser3:         "Parser3";
-		--des-pascal:          "Pascal/Object Pascal";
-		--des-perl:            "Perl";
-		--des-pf:              "PF";
-		--des-php:             "PHP";
-		--des-pony:            "Pony";
-		--des-powershell:      "PowerShell";
-		--des-processing:      "Processing";
-		--des-prolog:          "Prolog";
-		--des-plist:           "Property List";
-		--des-protobuf:        "Protocol Buffers";
-		--des-puppet:          "Puppet";
-		--des-purebasic:       "PureBASIC";
-		--des-python:          "Python (py)";
-		--des-profile:         "Python profile";
-
-		--des-q:               "Q";
-		--des-qml:             "QML";
-
-		--des-r:               "R";
-		--des-rib:             "RenderMan RIB";
-		--des-rsl:             "RenderMan RSL";
-		--des-roboconf:        "Roboconf";
-		--des-rss:             "RSS Feed (XML)";
-		--des-ruby:            "Ruby";
-		--des-gemspec:         "Ruby Gem";
-		--des-rust:            "Rust";
-
-		--des-scala:           "Scala";
-		--des-scheme:          "Scheme";
-		--des-scilab:          "Scilab";
-		--des-scss:            "SCSS";
-		--des-shell:           "Shell";
-		--des-smali:           "Smali";
-		--des-smalltalk:       "Smalltalk";
-		--des-sml:             "SML (ml)";
-		--des-sqf:             "SQF";
-		--des-sql:             "SQL";
-		--des-stan:            "Stan";
-		--des-stata:           "Stata";
-		--des-step21:          "STEP Part 21";
-		--des-stylus:          "Stylus";
-		--des-subunit:         "SubUnit";
-		--des-swift:           "Swift";
-
-		--des-taggerscript:    "Tagger Script";
-		--des-tap:             "TAP";
-		--des-thor:            "Thor";
-		--des-tcl:             "Tcl";
-		--des-tex:             "TeX";
-		--des-thrift:          "Thrift";
-		--des-tp:              "TP";
-		--des-twig:            "Twig";
-		--des-typescript:      "TypeScript";
-		--des-vala:            "Vala";
-		--des-vbnet:           "VB.NET";
-		--des-vbscript:        "VBScript";
-		--des-vbscript-html:   "VBScript HTML";
-		--des-verilog:         "Verilog";
-		--des-vhdl:            "VHDL";
-		--des-vim:             "Vim Script";
-
-		--des-x86asm:          "x86 Assembly";
-		--des-xl:              "XL";
-		--des-xquery:          "XQuery";
-		--des-yaml:            "YAML";
-		--des-xhtml:           "XHTML";
-		--des-xml:             "XML";
-		--des-xsd:             "XML Schema";
-		--des-xsl:             "XSL";
-
-		--des-zephir:          "Zephir";
-
-	  /*--des-default:			"Not defined";*/
+/* определение используемого кода указанного в код-блоке, т.е надпись над код-блоком (например css, bash, ini и т.д.) */
+/*.message-group .comment .markup pre code::before {
+	content: attr(class);
+	width: calc(100% + 270px);
+	display: block;
+	margin: -7px 0 .5em -270px;
+	padding: 2px 6px 2px 0;
+	background-color: #00000E;
+	color: #FFF;
+	font-family: "Segoe UI", Selawik, Arial, Helvetica, sans-serif; /шрифт, лучше хуярить тот же что и на 3 строке/
+	font-size: 10px;
+	line-height: 0.9625;
+	text-transform: uppercase;
+	word-spacing: 12px; 
 }
-.message-group .comment .markup pre code:before {
-  position: relative;
-  display: block;
-  top: 0;
-  text-align: center;
-  width: auto;
-  color: rgba(255, 98, 98, 0.99);
-  background-color: rgba(0,0,0,.5);
-  border: 2px solid black;
-  border-radius: 5px;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  margin-top: 0px !important;
-  margin-bottom: 4px;
+*/
+
+/* Зелёный текст в <Моя учётная запись> */
+[layer-id="user-settings"] .userSettingsAccount-2eMFVR ~ :last-child:after{ 
+	margin-bottom: -3px;
+	padding-top: 10px;
+	padding-left: 10px;
+	display: block;
+	background: transparent;
+	border: 1px solid var(--Main-Colour);
+	border-radius: 5px;
+	content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" style="width:100%;height:100px;"><g style="fill: lime; font-size: .8em; font-family:verdana"><text y="20" style="font-size: 2em; fill: lime;">Ссылки</text><text y="45" style="font-size: 1.1em;" x="37">Гитхаб : github.com/ufgf/customtheme</text><text y="65" style="font-size: 1.1em;" x="37">Сервер для саппорта : discord.gg/suJppwC</text><text y="85" style="font-size: 1.1em;" x="37">1</text><text y="115" style="font-size: 2em; fill: lime;">Особенности</text><text y="140" style="font-size: 1.1em;" x="37">Блюр email</text><text y="160" style="font-size: 1.1em;" x="37">Возможность увидеть какой язык кода используется в код-блоке</text><text y="180" style="font-size: 1.1em;" x="37">Скрытие списка мемберов</text><text y="200" style="font-size: 1.1em;" x="37">Некоторые детали прозрачны</text><text y="220" style="font-size: 1.1em;" x="37">Использование своего шрифта</text><text y="240" style="font-size: 1.1em;" x="37">Цветная игра</text><text y="260" style="font-size: 1.1em;" x="37">Уменьшены некоторые элементы</text><text y="280" style="font-size: 1.1em;" x="37">Широкие настройки/сервера и текст по центру в кнопках</text><text y="300" style="font-size: 1.1em;" x="37">И гипер куча мелких изменений</text></g></svg>');
+	animation: CLog 10s infinite linear;
 }
 
-[layer-id="user-settings"] .userSettingsAccount-2eMFVR ~ :last-child:after{ /*Зелёный текст в <Моя учётная запись>*/
-  margin-bottom: -3px;
-  padding-top: 10px;
-  padding-left: 10px;
-  display: block;
-  background: transparent;
-  border:1px solid var(--Main-Colour);
-  border-radius: 5px;
-  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" style="width:100%;height:100px;"><g style="fill: lime; font-size: .8em; font-family:verdana"><text y="20" style="font-size: 2em; fill: lime;">Ссылки</text><text y="45" style="font-size: 1.1em;" x="37">Гитхаб : github.com/ufgf/customtheme</text><text y="65" style="font-size: 1.1em;" x="37">Сервер для саппорта : discord.gg/suJppwC</text><text y="85" style="font-size: 1.1em;" x="37">1</text><text y="115" style="font-size: 2em; fill: lime;">Особенности</text><text y="140" style="font-size: 1.1em;" x="37">Блюр email</text><text y="160" style="font-size: 1.1em;" x="37">Возможность увидеть какой язык кода используется в код-блоке</text><text y="180" style="font-size: 1.1em;" x="37">Скрытие списка мемберов</text><text y="200" style="font-size: 1.1em;" x="37">Некоторые детали прозрачны</text><text y="220" style="font-size: 1.1em;" x="37">Использование своего шрифта</text><text y="240" style="font-size: 1.1em;" x="37">Цветная игра</text><text y="260" style="font-size: 1.1em;" x="37">Уменьшены некоторые элементы</text><text y="280" style="font-size: 1.1em;" x="37">Широкие настройки/сервера и текст по центру в кнопках</text><text y="300" style="font-size: 1.1em;" x="37">И гипер куча мелких изменений</text></g></svg>');
-  animation: CLog 10s infinite linear;
-}
-
-.message-group .accessory{ /*Умный парсинг превью ссылок, оригинал и скриншоты: https://github.com/BeardDesign1/SmarterEmbeds */
-	display: flex;
-	flex-flow: row wrap;
-}
-.message-group .accessory>*:not(:last-of-type){
-	margin-right:10px;
-}
-.message-group .accessory>*{
-	margin-top:5px;
-}
-.reactions{
-	width:100%;
-	flex:100%;
-	order:9999999999;
-}
-
+/* Прозрачность в вещах описанных выше */
 #rtc-connection, #friends, #friends .btn, .friends-header, .friends-table, .search-bar, .guilds-wrapper, .channels-wrap, .guild-channels, .account, .links, .messages-wrapper, .title-wrap, .content, .chat-empty, .message-group-blocked, .private-channels, .guild-header header, .typing, .ider-red span {
-    background: transparent !important; /*Прозрачность в вещах описанных выше*/
+	background: transparent !important; 
 }
 
-/*#voice-connection, 
+/* Тёмные цвета везде где тожно, или Fully Darkness */ 
+/*
+#voice-connection, 
 #friends, 
 .friends-header, 
 .friends-table, 
@@ -560,20 +327,21 @@ div[class*="membersWrap-"]:hover .avatar-small{
 .theme-dark .typing-2GQL18,
 .search-bar.search-bar-light,
 .emojiPicker-3m1S-j .scroller-3vODG7 .emojiItem-109bjA.selected-39BZ4S,
-.theme-dark .members-1998pB{
-  background: transparent !important;
+.theme-dark .members-1998pB {
+	background: transparent !important;
 }
 .theme-dark .card-2WxYqG {
-    background-color: rgba(54, 57, 63, 0.3)!important;
+	background-color: rgba(54, 57, 63, 0.3)!important;
 }
 .theme-dark .layer-3QrUeG, .theme-dark .layers-3iHuyZ, .typeWindows-15E0Ys {
-    background: rgba(0, 0, 0, 0.18) !important;
+	background: rgba(0, 0, 0, 0.18) !important;
 }
-Тёмные цвета везде где тожно, или Fully Darkness*/
+*/
 
 
-
-/*:not(.guilds-wrapper.DSAC-styled) .guilds-add > .guilds-add-inner { Сервера, которые скрываются/раскрываются в стопке с эффектом Fade
+/* Сервера, которые скрываются/раскрываются в стопке с эффектом Fade */
+/*
+:not(.guilds-wrapper.DSAC-styled) .guilds-add > .guilds-add-inner { 
  	font-size: 0 !important;
  }
 
@@ -600,15 +368,15 @@ div[class*="membersWrap-"]:hover .avatar-small{
  }
 
 .guilds-wrapper:not(.DSAC-styled):not(:hover) > div > div > .guild:not(.unread):not(:first-child):not([id="bd-pub-li"]){
-     opacity: 0 ;
-     height: 0 ;
+	 opacity: 0 ;
+	 height: 0 ;
 	 margin-top: 0;
  	 transition: height 0.4s, opacity 0.4s, margin 0.4s;
-     transition-delay: 0.3s ;
+	 transition-delay: 0.3s ;
  }
 
  .guilds-wrapper:not(.DSAC-styled) > div > div > .guild{
-     opacity: 0.8 ;
+	 opacity: 0.8 ;
 	 margin-top: 0;
 	 transition: height 0.4s, opacity 0.4s, margin 0.4s;
  }
@@ -631,35 +399,29 @@ div[class*="membersWrap-"]:hover .avatar-small{
  	background: transparent ;
  }
 */
-
-.container-hidden .colorDefaultText-oas-QM, /*Новые цвета иконок каналов на серверах*/
-.container-hidden .colorDefaultVoice-3wYlhb {
+/* Новые цвета иконок каналов на серверах */
+.container-hidden .colorDefaultText-oas-QM, .container-hidden .colorDefaultVoice-3wYlhb {
 	color: rgb(98,98,255);
 	stroke: rgb(98,98,255);
 }
-.colorHoveredText-OZnAgu,
-.colorHoveredVoice-1kucsK {
+.colorHoveredText-OZnAgu, .colorHoveredVoice-1kucsK {
 	color: white;
 	stroke: white;
 	stroke-width: 2 !important;
 }
-.colorDefaultText-oas-QM,
-.colorDefaultVoice-3wYlhb {
+.colorDefaultText-oas-QM, .colorDefaultVoice-3wYlhb {
 	color: white;
 	stroke: white;
 }
-.colorUnreadText-2t7XRb,
-.colorUnreadVoice-137o4S {
+.colorUnreadText-2t7XRb, .colorUnreadVoice-137o4S {
 	color: rgb(204,204,0);
 	stroke: rgb(204,204,0);
 }
-.colorLockedText-1VRkPt,
-.colorLockedVoice-2UlBjl{
+.colorLockedText-1VRkPt, .colorLockedVoice-2UlBjl{
 	color: rgb(98,98,255);
 	stroke: rgb(98,98,255);
 }
-.colorSelectedVoice-Xcb_9R,
-.colorSelectedText-1y4Wvs {
+.colorSelectedVoice-Xcb_9R, .colorSelectedText-1y4Wvs {
 	color: rgb(51,204,51);
 	stroke: rgb(51,204,51);
 }
@@ -668,33 +430,35 @@ div[class*="membersWrap-"]:hover .avatar-small{
 	stroke: rgb(20,20,20);
 }
 
-.channels-Ie2l6A { /*ширина каналов/лс меньше чем стандарт*/
-  width: 222px;
+/* Меньшая Ширина каналов/лс */
+.channels-Ie2l6A { 
+	width: 222px;
 }
 
-.guilds-wrapper .guilds .guild.unread:before { /*Новый индикатор непрочитанных сообщений с анимациями!*/
-    background: #3191D9;
-    border-radius: 0;
-    height: 15px;
-    margin-top: -6px;
-    box-shadow: 0 0 12px #5873DC;
+/* Новый индикатор непрочитанных сообщений с анимациями! */
+.guilds-wrapper .guilds .guild.unread:before { 
+	background: #3191D9;
+	border-radius: 0;
+	height: 15px;
+	margin-top: -6px;
+	box-shadow: 0 0 12px #5873DC;
 }
 .theme-dark .chat form {
-    -webkit-box-shadow: none;
-    border: 0;
-    box-shadow: none;
+	-webkit-box-shadow: none;
+	border: 0;
+	box-shadow: none;
 }
 .guild.unread:before {
-    animation: pulse 2s infinite;
+	animation: pulse 2s infinite;
 }
 .unread-1Dp-OI {
-    animation: pulse 2s infinite;
+	animation: pulse 2s infinite;
 }
-.badge{
+.badge {
   animation:mention-flash 1.5s linear infinite;
   border-radius:calc(0px * var(--borders) + 20px * (1 - var(--borders)));
 }
-.unread-1Dp-OI{
+.unread-1Dp-OI {
   background-color:#bfbfbf;
   border-radius:calc(0px * var(--borders) + 20px * (1 - var(--borders)));
   height:25px;
@@ -704,204 +468,248 @@ div[class*="membersWrap-"]:hover .avatar-small{
   top:8px;
   width:4px
 }
-.unread-1xRYoj{background-color:rgba(33,33,33,.9);transition:background-color .3s ease-in-out}.unread-1xRYoj:hover{background-color:rgba(39,39,39,.9);transition:background-color .3s ease-in-out}
-.theme-dark #friends .tab-bar .tab-bar-item .badge{background-color:#f04747;color:#fff;animation:mention-flash 1.5s linear infinite}
-
-.ui-standard-sidebar-view .sidebar-region { /*широкие настройки*/
-    -ms-flex: 0;
-    -ms-flex-pack: end;
-    flex: 0;
-    z-index: 1;
+.unread-1xRYoj {
+	background-color:rgba(33,33,33,.9);
+	transition:background-color .3s ease-in-out;
 }
-.ui-standard-sidebar-view .sidebar-region, .ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller {
-    justify-content: flex-start;
+.unread-1xRYoj:hover {
+	background-color:rgba(39,39,39,.9);
+	transition:background-color .3s ease-in-out;
+}
+.theme-dark #friends .tab-bar .tab-bar-item .badge {
+	background-color:#f04747;
+	color:#fff;
+	animation: mention-flash 1.5s linear infinite;
 }
 
-#bd-settings-sidebar .ui-tab-bar-item { /*покрашенные кнопки в категории BD*/
-    color: #b9bbbe;
-    margin-bottom: 2px;
-    padding: 6px 6px;
-    position: relative;
-    font-size: 16px;
-    line-height: 20px;
-    border-radius: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    flex-shrink: 0;
-    font-weight: 500;
-    cursor: pointer;
+/* Более широкие настройки */
+.sidebarRegion-VFTUkN { 
+	-ms-flex: 0;
+	-ms-flex-pack: end;
+	flex: 0;
+	z-index: 1;
+}
+/*
+.sidebarRegion-VFTUkN, .scrollerWrap-2lJEkd {
+	justify-content: flex-start;
+}
+*/
+.contentColumn-2hrIYH, .customColumn-Rb6toI { 
+	-ms-flex: 1 1 auto;
+	-webkit-box-flex: 1;
+	flex: 1 1 auto;
+	max-width: 100%;
+	min-height: 100%;
+	min-width: 460px;
+}
+
+
+/* Покрашенные кнопки в категории BD */
+/*
+#bd-settings-sidebar .ui-tab-bar-item { 
+	color: #b9bbbe;
+	margin-bottom: 2px;
+	padding: 6px 6px;
+	position: relative;
+	font-size: 16px;
+	line-height: 20px;
+	border-radius: 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	flex-shrink: 0;
+	font-weight: 500;
+	cursor: pointer;
 }
 #bd-settings-sidebar .ui-tab-bar-item:hover {
-    color: #FFF;
-    background-color: #5873DC;
+	color: #FFF;
+	background-color: #5873DC;
 }
 .side-2nYO0F .item-3879bf {
-    border-radius: 0;
-    margin-bottom: 2px;
-    padding-bottom: 6px;
-    color: #FFF !important;
-    padding-top: 6px;
-    transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	border-radius: 0;
+	margin-bottom: 2px;
+	padding-bottom: 6px;
+	color: #FFF !important;
+	padding-top: 6px;
+	transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .theme-dark .side-2nYO0F .itemDefault-3NDwnY:hover, .theme-dark .side-2nYO0F .itemHover-3rojsB:hover {
-    background-color: #5873DC !important;
-    color: #FFF !important;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+	background-color: #5873DC !important;
+	color: #FFF !important;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
 }
 .bda-slist li {
-    background: #29292A;
-    border: 0;
-    border-radius: 0;
-    padding: 5px 7px;
-    max-height: 175px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
-    overflow: hidden;
+	background: #29292A;
+	border: 0;
+	border-radius: 0;
+	padding: 5px 7px;
+	max-height: 175px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+	overflow: hidden;
 }
+*/
 
-.a { /*Новые кнопки вкл/выкл в категории BD*/
-    background-color: #7289da !important;
-}
+/* Новые кнопки вкл/выкл в категории BD */
 .a {
-    border-radius: 100%;
-    height: 24px;
-    z-index: 100000;
+	border-radius: 100%;
+	height: 24px;
+	z-index: 100000;
 }
 .sizeDefault-rZbSBU:after {
-    margin: 5px;
-    margin: -3px 0 0 0;
-    width: 24px;
-    z-index: 10000;
+	margin: 5px;
+	margin: -3px 0 0 0;
+	width: 24px;
+	z-index: 10000;
 }
 .a {
-    background-color: #7289DA !important;
-    content: "";
-    display: block;
-    position: relative;
-    z-index: 1;
+	background-color: #7289DA !important;
+	content: "";
+	display: block;
+	position: relative;
+	z-index: 1;
 }
 #bd-settingspane-container .ui-switch-item .ui-switch-wrapper {
-    border-radius: 14px;
-    height: 18px;
-    width: 42px;
+	border-radius: 14px;
+	height: 18px;
+	width: 42px;
 }
 .switchEnabled-3CPlLV {
-    opacity: 1;
-    overflow: unset;
+	opacity: 1;
+	overflow: unset;
 }
 #bd-settingspane-container .ui-switch-item .ui-switch-wrapper .ui-switch:before {
-    bottom: 0;
-    content: "";
-    display: block;
-    left: 0;
-    opacity: 0;
-    position: unset;
-    z-index: -1000000;
+	bottom: 0;
+	content: "";
+	display: block;
+	left: 0;
+	opacity: 0;
+	position: unset;
+	z-index: -1000000;
 }
 
-.theme-dark .message-group:not(.has-divider) { /*удаление линий между сообщениями*/
-    border-bottom-color: transparent;
+/* Удаление линий между сообщениями */
+.theme-dark .dividerEnabled-2TTlcf { 
+	border-bottom-color: transparent;
 }
 
-.theme-dark .message-group a { /*удаление закруглённостей на превью картинок*/
-    color: #0096cf;
-    border-radius: 0;
+/* Удаление закруглённостей на превью картинок */
+.theme-dark .message-group a { 
+	color: #0096cf;
+	border-radius: 0;
 }
 
+/* Новая иконка приклепления файлов в чатбоксе */
 /*
-svg[class^="attachButton"]{ /новая иконка приклепления файлов в чатбоксе/
-    background-image: url('https://image.flaticon.com/icons/png/128/321/321834.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+svg[class^="attachButton"]{ 
+	background-image: url('https://image.flaticon.com/icons/png/128/321/321834.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 svg[class^="attachButton"] > *{display: none;}
 */
 
-/*.guilds-wrapper .guilds .guild.selected:before { /Твики для иконок на панели слева (сервера, лс)/
-    -webkit-transition: height .25s ease-in-out,margin-top .25s ease-in-out;
-    background: #3191D9;
-    border-radius: 0!important;
-    height: 55px;
-    margin-top: -27px;
-    transition: height .25s ease-in-out,margin-top .25s ease-in-out;
+/* Твики для иконок на панели слева (сервера, лс) */
+/*
+.guilds-wrapper .guilds .guild.selected:before { 
+	-webkit-transition: height .25s ease-in-out,margin-top .25s ease-in-out;
+	background: #3191D9;
+	border-radius: 0!important;
+	height: 55px;
+	margin-top: -27px;
+	transition: height .25s ease-in-out,margin-top .25s ease-in-out;
 }
-.guilds-wrapper .guilds .guild .guild-inner { /Эффект тени от иконки, лучше видны края/
-    background: transparent !important;
-    border-radius: 100% !important;
-    cursor: pointer;
-    font-size: 18px;
-    line-height: 50px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+*/
+
+/* Эффект тени от иконки (лучше видны края) */
+/*
+.guilds-wrapper .guilds .guild .guild-inner { 
+	background: transparent !important;
+	border-radius: 100% !important;
+	cursor: pointer;
+	font-size: 18px;
+	line-height: 50px;
+	overflow: hidden;
+	text-align: center;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+	transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
 }*/
-.guilds-wrapper .guilds .guild .guild-inner:hover { /*Тень от иконок при наведении*/
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+
+/* Тень от иконок при наведении */
+/*
+.guilds-wrapper .guilds .guild .guild-inner:hover { 
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+}
+*/
+
+/* Текст по центру на вкладках в настройках */
+.side-8zPYf6 .item-PXvHYJ, .sidebar-CFHs9e .side-8zPYf6 { 
+	text-align: center;
 }
 
-.sidebar .side-8zPYf6 { /*Текст по центру на вкладках в настройках*/
-  text-align: center;
+/* Уменьшение названия игры в разделе игры в настройках */
+/*
+.user-settings-games .game-name { 
+	height: 20px;
 }
-.user-settings-games .game-name { /*уменьшение названия игры в разделе игры в настройках*/
-    height: 20px;
+*/
+
+/* удаляет сепараторы (разделители)? */
+/*
+.theme-dark #friends .tab-bar .tab-bar-separator { 
+	background-color: hsla(0,0%,100%,.1);
+	display: none;
 }
-.user-settings-keybinds .keybind-group { /*тоже самое что и выше но для сочетаний клавиш*/
-    padding: 0 15px;
-    padding-bottom: 19px;
-    padding-top: 20px;
+*/
+
+/*квадратные кнопки категорий в ЛС*/
+/*.theme-dark #friends .tab-bar .tab-bar-item { 
+	color: hsla(0,0%,100%,.6);
+	border-radius: 0;
 }
-.theme-dark #friends .tab-bar .tab-bar-separator { /*удаляет сепараторы (разделители)?*/
-    background-color: hsla(0,0%,100%,.1);
-    display: none;
-}
-.theme-dark #friends .tab-bar .tab-bar-item { /*квадратные кнопки категорий в ЛС*/
-    color: hsla(0,0%,100%,.6);
-    border-radius: 0;
-}
+
 .theme-dark #friends .tab-bar .tab-bar-item:hover:not(.selected) {
-    background-color: #29292A;
-    color: #FFF;
+	background-color: #29292A;
+	color: #FFF;
 }
-.theme-dark .ui-standard-sidebar-view .btn-close { /*Квадратная кнопка <Закрыть> в настройках*/
-    border-color: rgb(76, 123, 225);
-    border-radius: 0;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.ui-standard-sidebar-view .content-column.default { /*Убираем лишние пробелы в настройках*/
-    padding: 20px 40px 80px;
-}
-.ui-standard-sidebar-view .content-column, .ui-standard-sidebar-view .custom-column { /* Использование места, по назначению! Или лишнее пустое место в настройках будет заменено интерфейсом. Выглядит нереально ахуенно.*/
-    -ms-flex: 1 1 auto;
-    -webkit-box-flex: 1;
-    flex: 1 1 auto;
-    max-width: 100%;
-    min-height: 100%;
-    min-width: 460px;
+*/
+
+/* Квадратная кнопка <Закрыть> в настройках */
+.theme-dark .closeButton-1tv5uR { 
+	border-color: rgb(76, 123, 225);
+	border-radius: 0;
+	transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.container-1UB9sr,
-#rtc-connection,
-#voice-connection { /*Фон на <Подключено> (слева снизу) прозрачен*/
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0.1));
-    background-color: var(--lvl3);
-    transition: all 500ms ease;
-    border:none;
+/* Убираем лишние пробелы в настройках */
+/*
+.ui-standard-sidebar-view .content-column.default { 
+	padding: 20px 40px 80px;
+}
+*/
+
+/* Фон на <Подключено> (слева снизу) прозрачен */
+.container-1UB9sr, #rtc-connection, #voice-connection { 
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0.1));
+	background-color: var(--lvl3);
+	transition: all 500ms ease;
+	border:none;
 }
 
-.buttonInfo-3nkbOt { /*новая иконка: информация о подключении*/
-    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMSAxNWgtMnYtNmgydjZ6bTAtOGgtMlY3aDJ2MnoiLz48L3N2Zz4=) !important;
-    background-color: rgba(115,139,215,.98) !important;
+/* Иовая иконка: информация о подключении */
+.buttonInfo-3nkbOt { 
+	background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMSAxNWgtMnYtNmgydjZ6bTAtOGgtMlY3aDJ2MnoiLz48L3N2Zz4=) !important;
+	background-color: rgba(115,139,215,.98) !important;
 	opacity: 0.8 !important;
 	border-radius: 16px !important;
 	right: 5px !important;
 }
-.buttonDisconnect-3W_SJc { /*новая иконка: отключение*/
-    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTIgOWMtMS42IDAtMy4xNS4yNS00LjYuNzJ2My4xYzAgLjM5LS4yMy43NC0uNTYuOS0uOTguNDktMS44NyAxLjEyLTIuNjYgMS44NS0uMTguMTgtLjQzLjI4LS43LjI4LS4yOCAwLS41My0uMTEtLjcxLS4yOUwuMjkgMTMuMDhjLS4xOC0uMTctLjI5LS40Mi0uMjktLjcgMC0uMjguMTEtLjUzLjI5LS43MUMzLjM0IDguNzggNy40NiA3IDEyIDdzOC42NiAxLjc4IDExLjcxIDQuNjdjLjE4LjE4LjI5LjQzLjI5LjcxIDAgLjI4LS4xMS41My0uMjkuNzFsLTIuNDggMi40OGMtLjE4LjE4LS40My4yOS0uNzEuMjktLjI3IDAtLjUyLS4xMS0uNy0uMjgtLjc5LS43NC0xLjY5LTEuMzYtMi42Ny0xLjg1LS4zMy0uMTYtLjU2LS41LS41Ni0uOXYtMy4xQzE1LjE1IDkuMjUgMTMuNiA5IDEyIDl6Ii8+PC9zdmc+) !important;
-    background-color: rgb(240,71,71) !important;
+/* Новая иконка: отключение */
+.buttonDisconnect-3W_SJc {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNMTIgOWMtMS42IDAtMy4xNS4yNS00LjYuNzJ2My4xYzAgLjM5LS4yMy43NC0uNTYuOS0uOTguNDktMS44NyAxLjEyLTIuNjYgMS44NS0uMTguMTgtLjQzLjI4LS43LjI4LS4yOCAwLS41My0uMTEtLjcxLS4yOUwuMjkgMTMuMDhjLS4xOC0uMTctLjI5LS40Mi0uMjktLjcgMC0uMjguMTEtLjUzLjI5LS43MUMzLjM0IDguNzggNy40NiA3IDEyIDdzOC42NiAxLjc4IDExLjcxIDQuNjdjLjE4LjE4LjI5LjQzLjI5LjcxIDAgLjI4LS4xMS41My0uMjkuNzFsLTIuNDggMi40OGMtLjE4LjE4LS40My4yOS0uNzEuMjktLjI3IDAtLjUyLS4xMS0uNy0uMjgtLjc5LS43NC0xLjY5LTEuMzYtMi42Ny0xLjg1LS4zMy0uMTYtLjU2LS41LS41Ni0uOXYtMy4xQzE1LjE1IDkuMjUgMTMuNiA5IDEyIDl6Ii8+PC9zdmc+) !important;
+	background-color: rgb(240,71,71) !important;
 	opacity: 0.8 !important;
 	border-radius: 16px !important;
 }
@@ -909,14 +717,16 @@ svg[class^="attachButton"] > *{display: none;}
 	background-color: transparent !important
 }
 
-.guilds-add { /*Новая иконка добавления/создания сервера*/
-    color: transparent !important;
-    background-image: url('https://i.imgur.com/1MfzLoF.png') !important;
-    background-size: 30px 30px !important;
-    background-repeat: no-repeat !important;
-    background-position: 9px 9px !important;
-    background-color: rgba(21, 21, 21, 0.41) !important;
-    opacity: 0.7 !important;
+/* Новая иконка добавления/создания сервера */
+/*
+.guilds-add { 
+	color: transparent !important;
+	background-image: url('https://i.imgur.com/1MfzLoF.png') !important;
+	background-size: 30px 30px !important;
+	background-repeat: no-repeat !important;
+	background-position: 9px 9px !important;
+	background-color: rgba(21, 21, 21, 0.41) !important;
+	opacity: 0.7 !important;
 }
 .guild.guilds-add:hover {
   border-color: var(--Main-Colour) !important;
@@ -928,60 +738,62 @@ svg[class^="attachButton"] > *{display: none;}
   left:22.4%;
   text-align:center;
 }
+*/
 
-.jump-to-present-bar button:first-of-type { /*"Перейти к последним сообщениям" теперь стильнее, короче находится справа снизу в виде кнопки*/
-    display: none;
+.jumpToPresentBar-9P20AM { /*"Перейти к последним сообщениям" теперь стильнее, короче находится справа снизу в виде кнопки*/
+	display: none;
 }
 .jump-to-present-bar {
-    width: 130px!important;
-    right: 10px!important;
-    left: auto!important;
-    animation: slide-up .7s cubic-bezier(.4, 0, 0, 1), opacity .7s ease;
+	width: 130px!important;
+	right: 10px!important;
+	left: auto!important;
+	animation: slide-up .7s cubic-bezier(.4, 0, 0, 1), opacity .7s ease;
 }
 .chat .jump-to-present-bar button:last-child {
-    width: 130px!important;
-    text-align: center;
+	width: 130px!important;
+	text-align: center;
 }
 .chat .jump-to-present-bar .spinner {
-    margin-left: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    -ms-transform: scale(1.3);
-    transform: scale(1.3)
+	margin-left: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	-ms-transform: scale(1.3);
+	transform: scale(1.3)
 }
 .chat .jump-to-present-bar{
-    bottom:15px;
-    border-radius:20px;
-    right:50px!important;
-    width:auto!important;
-    box-shadow: 0 2px 20px rgba(0,0,0,.1);
+	bottom:15px;
+	border-radius:20px;
+	right:50px!important;
+	width:auto!important;
+	box-shadow: 0 2px 20px rgba(0,0,0,.1);
 }
 .chat .jump-to-present-bar:before{
-    content:"";
-    width:20px;
-    background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+CiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGQ9Ik0wIDEyVjBoMTJ2MTIiLz4KICAgIDxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik01LjI0ODI5MTAyIDJ2NS4yMTg2ODg5NkwzIDUgMiA2bDQgNCA0LTQtMS0xLTIuMjg0MTE4NjUgMi4yMTg2ODg5NlYyIi8+CiAgPC9nPgo8L3N2Zz4=);
-    background-repeat: no-repeat;
-    background-position: 50%;
-    margin-right:-15px;
-    padding-left:10px;
+	content:"";
+	width:20px;
+	background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+CiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGQ9Ik0wIDEyVjBoMTJ2MTIiLz4KICAgIDxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik01LjI0ODI5MTAyIDJ2NS4yMTg2ODg5NkwzIDUgMiA2bDQgNCA0LTQtMS0xLTIuMjg0MTE4NjUgMi4yMTg2ODg5NlYyIi8+CiAgPC9nPgo8L3N2Zz4=);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	margin-right:-15px;
+	padding-left:10px;
 }
 .chat .jump-to-present-bar .spinner{
-    margin-left:0px;
-    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjI1IDI1IDUwIDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMDAgMTAwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9ImNpcmN1bGFyIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5sb2FkZXIgeyAgcG9zaXRpb246IHJlbGF0aXZlOyAgbWFyZ2luOiAwIGF1dG87ICB3aWR0aDogMTAwcHg7fS5sb2FkZXI6YmVmb3JlIHsgIGNvbnRlbnQ6ICcnOyAgZGlzcGxheTogYmxvY2s7ICBwYWRkaW5nLXRvcDogMTAwJTt9LmNpcmN1bGFyIHsgIC13ZWJraXQtYW5pbWF0aW9uOiByb3RhdGUgMnMgbGluZWFyIGluZmluaXRlOyAgICAgICAgICBhbmltYXRpb246IHJvdGF0ZSAycyBsaW5lYXIgaW5maW5pdGU7ICBoZWlnaHQ6IDEwMCU7ICAtd2Via2l0LXRyYW5zZm9ybS1vcmlnaW46IGNlbnRlciBjZW50ZXI7ICAgICAgICAgIHRyYW5zZm9ybS1vcmlnaW46IGNlbnRlciBjZW50ZXI7ICB3aWR0aDogMTAwJTsgIHBvc2l0aW9uOiBhYnNvbHV0ZTsgIHRvcDogMDsgIGJvdHRvbTogMDsgIGxlZnQ6IDA7ICByaWdodDogMDsgIG1hcmdpbjogYXV0bzsgIHN0cm9rZTogI2ZmZjt9LnBhdGggeyAgc3Ryb2tlLWRhc2hhcnJheTogMSwgMjAwOyAgc3Ryb2tlLWRhc2hvZmZzZXQ6IDA7ICAtd2Via2l0LWFuaW1hdGlvbjogZGFzaCAxLjVzIGVhc2UtaW4tb3V0IGluZmluaXRlLCBjb2xvciA2cyBlYXNlLWluLW91dCBpbmZpbml0ZTsgICAgICAgICAgYW5pbWF0aW9uOiBkYXNoIDEuNXMgZWFzZS1pbi1vdXQgaW5maW5pdGUsIGNvbG9yIDZzIGVhc2UtaW4tb3V0IGluZmluaXRlOyAgc3Ryb2tlLWxpbmVjYXA6IGJ1dHQ7fUAtd2Via2l0LWtleWZyYW1lcyByb3RhdGUgeyAgMTAwJSB7ICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgICAgICAgICAgICB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpOyAgfX1Aa2V5ZnJhbWVzIHJvdGF0ZSB7ICAxMDAlIHsgICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpOyAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7ICB9fUAtd2Via2l0LWtleWZyYW1lcyBkYXNoIHsgIDAlIHsgICAgc3Ryb2tlLWRhc2hhcnJheTogMSwgMjAwOyAgICBzdHJva2UtZGFzaG9mZnNldDogMDsgIH0gIDUwJSB7ICAgIHN0cm9rZS1kYXNoYXJyYXk6IDg5LCAyMDA7ICAgIHN0cm9rZS1kYXNob2Zmc2V0OiAtMzVweDsgIH0gIDEwMCUgeyAgICBzdHJva2UtZGFzaGFycmF5OiA4OSwgMjAwOyAgICBzdHJva2UtZGFzaG9mZnNldDogLTEyNHB4OyAgfX1Aa2V5ZnJhbWVzIGRhc2ggeyAgMCUgeyAgICBzdHJva2UtZGFzaGFycmF5OiAxLCAyMDA7ICAgIHN0cm9rZS1kYXNob2Zmc2V0OiAwOyAgfSAgNTAlIHsgICAgc3Ryb2tlLWRhc2hhcnJheTogODksIDIwMDsgICAgc3Ryb2tlLWRhc2hvZmZzZXQ6IC0zNXB4OyAgfSAgMTAwJSB7ICAgIHN0cm9rZS1kYXNoYXJyYXk6IDg5LCAyMDA7ICAgIHN0cm9rZS1kYXNob2Zmc2V0OiAtMTI0cHg7ICB9fSAgPC9zdHlsZT48Y2lyY2xlIGNsYXNzPSJwYXRoIiAgY3g9IjUwIiBjeT0iNTAiIHI9IjIwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIvPjwvc3ZnPg==);
-    height:26px;
-    margin-top:0;
-    margin-bottom:0;
-    transform:scale(1);
-    background-position: 50%;
-    background-size:40%;
-    background-repeat: no-repeat;
-    width:26px;
+	margin-left:0px;
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjI1IDI1IDUwIDUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMDAgMTAwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9ImNpcmN1bGFyIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5sb2FkZXIgeyAgcG9zaXRpb246IHJlbGF0aXZlOyAgbWFyZ2luOiAwIGF1dG87ICB3aWR0aDogMTAwcHg7fS5sb2FkZXI6YmVmb3JlIHsgIGNvbnRlbnQ6ICcnOyAgZGlzcGxheTogYmxvY2s7ICBwYWRkaW5nLXRvcDogMTAwJTt9LmNpcmN1bGFyIHsgIC13ZWJraXQtYW5pbWF0aW9uOiByb3RhdGUgMnMgbGluZWFyIGluZmluaXRlOyAgICAgICAgICBhbmltYXRpb246IHJvdGF0ZSAycyBsaW5lYXIgaW5maW5pdGU7ICBoZWlnaHQ6IDEwMCU7ICAtd2Via2l0LXRyYW5zZm9ybS1vcmlnaW46IGNlbnRlciBjZW50ZXI7ICAgICAgICAgIHRyYW5zZm9ybS1vcmlnaW46IGNlbnRlciBjZW50ZXI7ICB3aWR0aDogMTAwJTsgIHBvc2l0aW9uOiBhYnNvbHV0ZTsgIHRvcDogMDsgIGJvdHRvbTogMDsgIGxlZnQ6IDA7ICByaWdodDogMDsgIG1hcmdpbjogYXV0bzsgIHN0cm9rZTogI2ZmZjt9LnBhdGggeyAgc3Ryb2tlLWRhc2hhcnJheTogMSwgMjAwOyAgc3Ryb2tlLWRhc2hvZmZzZXQ6IDA7ICAtd2Via2l0LWFuaW1hdGlvbjogZGFzaCAxLjVzIGVhc2UtaW4tb3V0IGluZmluaXRlLCBjb2xvciA2cyBlYXNlLWluLW91dCBpbmZpbml0ZTsgICAgICAgICAgYW5pbWF0aW9uOiBkYXNoIDEuNXMgZWFzZS1pbi1vdXQgaW5maW5pdGUsIGNvbG9yIDZzIGVhc2UtaW4tb3V0IGluZmluaXRlOyAgc3Ryb2tlLWxpbmVjYXA6IGJ1dHQ7fUAtd2Via2l0LWtleWZyYW1lcyByb3RhdGUgeyAgMTAwJSB7ICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgICAgICAgICAgICB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpOyAgfX1Aa2V5ZnJhbWVzIHJvdGF0ZSB7ICAxMDAlIHsgICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpOyAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7ICB9fUAtd2Via2l0LWtleWZyYW1lcyBkYXNoIHsgIDAlIHsgICAgc3Ryb2tlLWRhc2hhcnJheTogMSwgMjAwOyAgICBzdHJva2UtZGFzaG9mZnNldDogMDsgIH0gIDUwJSB7ICAgIHN0cm9rZS1kYXNoYXJyYXk6IDg5LCAyMDA7ICAgIHN0cm9rZS1kYXNob2Zmc2V0OiAtMzVweDsgIH0gIDEwMCUgeyAgICBzdHJva2UtZGFzaGFycmF5OiA4OSwgMjAwOyAgICBzdHJva2UtZGFzaG9mZnNldDogLTEyNHB4OyAgfX1Aa2V5ZnJhbWVzIGRhc2ggeyAgMCUgeyAgICBzdHJva2UtZGFzaGFycmF5OiAxLCAyMDA7ICAgIHN0cm9rZS1kYXNob2Zmc2V0OiAwOyAgfSAgNTAlIHsgICAgc3Ryb2tlLWRhc2hhcnJheTogODksIDIwMDsgICAgc3Ryb2tlLWRhc2hvZmZzZXQ6IC0zNXB4OyAgfSAgMTAwJSB7ICAgIHN0cm9rZS1kYXNoYXJyYXk6IDg5LCAyMDA7ICAgIHN0cm9rZS1kYXNob2Zmc2V0OiAtMTI0cHg7ICB9fSAgPC9zdHlsZT48Y2lyY2xlIGNsYXNzPSJwYXRoIiAgY3g9IjUwIiBjeT0iNTAiIHI9IjIwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIvPjwvc3ZnPg==);
+	height:26px;
+	margin-top:0;
+	margin-bottom:0;
+	transform:scale(1);
+	background-position: 50%;
+	background-size:40%;
+	background-repeat: no-repeat;
+	width:26px;
 }
 .chat .jump-to-present-bar .spinner *{
-    display: none;
+	display: none;
 }
 
-/*div[class^="channels-"]::after { /*Делает название темы под иконками <Выкл. микро, выкл звук, настройки> 
+/* Делаем название темы под иконками <Выкл. микро, выкл звук, настройки> */
+/*div[class^="channels-"]::after { 
   content: "PlusPlus";
   width: 100%;
   height: 20px;
@@ -995,87 +807,95 @@ svg[class^="attachButton"] > *{display: none;}
   vertical-align: middle; 
 }*/
 
-/*.app, canvas, .callout-backdrop { Свой фон, ссылку заменяем на ту которой хотим картинку
+/* Свой фон, ссылку заменяем на ту которой хотим картинку */
+/*.app, canvas, .callout-backdrop { 
 	background-image: url("https://i.imgur.com/Mu4SNn6.jpg") !important;
 }*/
 
-[class*=modal] .guilds {counter-reset: servercount;} /*Счётчик общих серверов*/
+/*Счётчик общих серверов*/
+/*
+[class*=modal] .guilds {counter-reset: servercount;} 
 [class*=modal] .guild:before {counter-increment: servercount;content:counter(servercount);width:20px;padding:0 2px 0 4px;margin:-10px 6px -10px -20px;font-size:12px;line-height:50px;border-right:1px solid rgba(100,100,100,.2);}
 [class*=modal] .guild:hover:before {background:linear-gradient(to right,rgba(190,190,190,.09) 23px,rgba(190,190,190,.02) 26px);}
+*/
 
-.guilds .friends-online { /*Счётчик друзей в сети (или серверов если есть плагин GuildCounter) на иконке ЛС!*/
-    font-size: 10px !important;
-    width: 14px !important;
-    height: 13px !important;
-    text-indent: 4px;
-    position: absolute;
-    overflow: hidden;
-    top: 30px;
-    left: 36px;
-    background: #738BD7;
-    color: white !important;
-    border-radius: 5px;
-    word-spacing: 7px;
-    opacity: 0.8;
-    border: 2px solid rgb(40, 40, 40);
-    z-index: 2;
+/*Счётчик друзей в сети (или серверов если есть плагин GuildCounter) на иконке ЛС!*/
+/*
+.guilds .friends-online { 
+	font-size: 10px !important;
+	width: 14px !important;
+	height: 13px !important;
+	text-indent: 4px;
+	position: absolute;
+	overflow: hidden;
+	top: 30px;
+	left: 36px;
+	background: #738BD7;
+	color: white !important;
+	border-radius: 5px;
+	word-spacing: 7px;
+	opacity: 0.8;
+	border: 2px solid rgb(40, 40, 40);
+	z-index: 2;
 }
+*/
 
-.theme-dark .cardPrimary-1Hv-to { /*Маленькие твики*/
-    background: transparent;
-    border-color: transparent;
+/*Маленькие твики*/
+.theme-dark .cardPrimary-1Hv-to { 
+	background: transparent;
+	border-color: transparent;
 }
 .userSettingsAccount-2eMFVR .userInfoEditing-1CEzdT, .userSettingsAccount-2eMFVR .userInfoViewing-16kqK3 {
-    padding: 0px;
+	padding: 0px;
 }
 .theme-dark .divider-3573oO {
-    background-color: transparent !important; 
+	background-color: transparent !important; 
 }
 .search-bar .search-bar-inner {
-    background: transparent;
-    border: 0px
+	background: transparent;
+	border: 0px
 }
 .chat .content form {
-    background: transparent !important
+	background: transparent !important
 }
 .side-8zPYf6 .separator-gCa7yv {
-    height: 0px;
+	height: 0px;
 }
 .popout-3sVMXz section {
-    background-color: #36393e;
+	background-color: #36393e;
 }
 .theme-dark .attachButtonDivider-3Glu60 {
-    background-color: transparent;
+	background-color: transparent;
 }
 .textArea-2Spzkt {
-    background-color: #36393e;
+	background-color: #36393e;
 	margin: 0;
 }
 .attachButton-1UjEWA {
-    padding: 5px;
+	padding: 5px;
 }
 .container-2Thooq {
 	background: transparent;
 }
 .container-3nXdBP hr {
-    color: transparent;
-    margin: 14px -15px;
+	color: transparent;
+	margin: 14px -15px;
 }
 .chat .welcome-message { /*Добавляем места*/
-    display: none; 
+	display: none; 
 }
-.message-group-blocked { /*уведомление о заблокированных сообщениях отображаться не будут*/
-    display: none;
+.message-group-blocked { /* Уведомление о заблокированных сообщениях отображаться не будут */
+	display: none;
 }
-.theme-dark div[class^="membersWrap"] div[class*="member-"] div[class^="activityText-"] { /*Теперь у мемберов на превью не будет надписи Играет в / Слушает, и т.п.*/
-    color: #FFF;
-    font-size: 0;
-    line-height: 1.3; }
+.theme-dark div[class^="membersWrap"] div[class*="member-"] div[class^="activityText-"] { /* Теперь у мемберов на превью не будет надписи Играет в / Слушает, и т.п. */
+	color: #FFF;
+	font-size: 0;
+	line-height: 1.3; }
   .theme-dark div[class^="membersWrap"] div[class*="member-"] div[class^="activityText-"] strong {
-      font-size: 11px !important;
-      font-weight: normal; }
+	  font-size: 11px !important;
+	  font-weight: normal; }
 	  
-.mentioned .mention, .mentioned .mention:hover { /*В любом упоминании (даже канала) будет красивый радужный эффект*/
+.mentioned .mention, .mentioned .mention:hover { /* В любом упоминании (даже канала) будет красивый радужный эффект */
   background: transparent !important;
 }
 .mention:hover {
@@ -1087,25 +907,25 @@ svg[class^="attachButton"] > *{display: none;}
   color: #fff;
   animation: CLog 4s infinite linear;
 }
-:root{ /*Фон упоминаний теперь синего цвета*/
+:root{ /* Фон упоминаний теперь синего цвета */
 	--Background: rgba(58, 113, 193, 0.2);
 	--Mention: #7289da;
 	--Bar: #1adbfa;
 }
 .theme-dark .message-group .mentioned .message-text {
-    background: var(--Background) !important;
+	background: var(--Background) !important;
 }
 .mention {
-    color: var(--Mention) !important;
+	color: var(--Mention) !important;
 }
 .message-group .mentioned .message-text:after {
-    position: absolute;
-    top: 0;
-    left: -6px;
-    bottom: 0;
-    content: " ";
-    width: 2px;
-    background: var(--Bar)!important;
-    border-left: 4px solid var(--Bar)!important;
-    border-radius: 2px 0 0 2px;
+	position: absolute;
+	top: 0;
+	left: -6px;
+	bottom: 0;
+	content: " ";
+	width: 2px;
+	background: var(--Bar)!important;
+	border-left: 4px solid var(--Bar)!important;
+	border-radius: 2px 0 0 2px;
 }
